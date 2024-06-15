@@ -2,14 +2,14 @@
   <div class="titleProject">
     <h1>Aplikacija za validaciju lozinke</h1>
     <h3>
-      Unesite željenu lozinku i pritisnite gumb i saznajte da li vaša lozinka zadovoljava
-      standarde jake lozinke radi bolje sigurnosti
+      Unesite željenu lozinku i pritisnite gumb <br />Provjerite ispunjava li vaša lozinka
+      kriterije jake lozinke za bolju sigurnost.
     </h3>
   </div>
   <div v-if="showButtonMessage">
     <p class="message">
-      Hint: Lozinka bi trebala imati minimalno 8 znakova, i koristiti kombinaciju malih,
-      velikih slova i posebnih znakova!
+      Savjet: Lozinka treba imati minimalno 8 znakova, <br />
+      koristiti kombinaciju malih i velikih slova i posebnih znakova!
     </p>
   </div>
 
@@ -20,8 +20,7 @@
     </div>
     <div v-if="check" style="text-align: center">
       <p class="message">
-        Vaša lozinka nam je jakoooo poznata, nalazi se u popisu često korištenih
-        lozinki!!!!!
+        Vaša lozinka nam je jakoooo poznata, nalazi se u popisu često korištenih lozinki!
       </p>
       <img
         class="image__WrongOrCheckmark"
@@ -30,7 +29,7 @@
     </div>
     <div v-else-if="comparisonResult !== null">
       <div v-if="comparisonResult" style="text-align: center">
-        <p class="message">Vaša lozinka zadovoljava standarde sigurnosti!!!</p>
+        <p class="message">Vaša lozinka zadovoljava standarde sigurnosti!</p>
         <img
           class="image__WrongOrCheckmark"
           src="../public/resources/images/checkmark.svg"
@@ -38,7 +37,7 @@
       </div>
       <div v-else style="text-align: center">
         <p class="message">
-          Vaša lozinka može biti bolja, ovakva lozinka baš ne zadovoljava standarde
+          Vaša lozinka može biti bolja. <br />Ovakva lozinka ne zadovoljava standarde
           sigurnosti.
         </p>
         <img class="image__WrongOrCheckmark" src="../public/resources/images/wrong.svg" />
@@ -46,7 +45,7 @@
     </div>
   </form>
   <div class="buttonDiv">
-    <button @click="showMessage">Hint</button>
+    <button @click="showMessage">Savjet</button>
   </div>
 
   <Footer />
