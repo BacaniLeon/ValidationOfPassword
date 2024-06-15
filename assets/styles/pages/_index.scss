@@ -1,0 +1,87 @@
+@import '../../../node_modules/include-media/dist/_include-media.scss';
+.titleProject{
+    font-size: 25rem;
+    width: 100%;
+    text-align: center;
+    @include media("<=tablet"){
+        font-size: 20rem;
+        max-width: 400rem;
+    }
+
+    h3{
+        width: 700rem;
+        margin: 0 auto;
+        @include media("<=tablet"){
+            width: 300rem;
+            font-size: 20rem;
+        }
+    }
+}
+
+.input__Password{
+    display: grid;
+    width: 100%;
+    gap: 10rem;
+    @include media("<=tablet"){
+        
+    }
+    input{
+        margin: 20rem auto 0;
+        width: 300rem;
+        height: 35rem;
+        font-size: 20rem;
+        @include media("<=tablet"){
+            width: 200rem;
+            height: 20rem;
+            font-size: 15rem;
+        }
+    }
+
+    button{
+        margin: 0 auto;
+        width: 100rem;
+        height: 30rem;
+        font-size: 15rem;
+        @include media("<=tablet"){
+            
+        }
+    }
+}
+
+.message{
+    font-size: 20rem;
+    text-align: center;
+    @include media("<=tablet"){
+        font-size: 15rem;
+    }
+}
+
+.buttonDiv{
+    position:absolute;
+    top: 0;
+    width: 100%;
+    max-width: 1400rem;
+    text-align:right;
+    margin-top: 10rem;
+    @include media("<=tablet"){
+        max-width: 400rem;
+        width: 98%;
+    }
+   
+    button{
+        width: 100rem;
+        height: 30rem;
+        font-size: 15rem;
+        @include media("<=tablet"){
+            width: 60rem;
+            height: 30rem;
+        }
+    }
+}
+
+.image__WrongOrCheckmark{
+    width: 300rem;
+    @include media("<=tablet"){
+     width: 150rem;   
+    }
+}

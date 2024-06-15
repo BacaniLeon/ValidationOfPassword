@@ -1,0 +1,20 @@
+@use 'sass:map';
+@import url('../styles/pages/_index.scss');
+@import '../../node_modules/include-media/dist/_include-media.scss';
+
+body {
+  font-size: 16px;
+}
+
+// Korisiti brojeve bez px, %, itd.
+$designViewportWidths: (
+  mobile: 375,
+  largeDesktop: 1440
+);
+
+html {
+  font-size: calc(100vw / #{map.get($designViewportWidths, 'largeDesktop')});
+  @include media('<=tablet') {
+    font-size: calc(100vw / #{map.get($designViewportWidths, 'mobile')});
+  }
+}
