@@ -48,6 +48,8 @@
   <div class="buttonDiv">
     <button @click="showMessage">Hint</button>
   </div>
+
+  <Footer />
 </template>
 
 <script setup>
